@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Airhoping</title>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+        
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>      
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header>
+
+        
+        <div style="cursor:pointer" onclick="openNav()" class="simbolos">
+            <img src="img/avion.svg" id="avion">
+            <img src="img/flecha.png" id="flecha">
+        </div>
+        <h1>Paga menos, viaja más</h1>
+        <img src="img/portada.jpg" id="portada">
+        
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">Inicio</a>
+                <a href="#">Lugares</a>
+                <a href="#">Chollos</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    
+        <nav>
+            <a href="#">Nosotros</a>
+            <a href="#">Anuncios</a>
+            <a href="#">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+    </header>
+
+    <section class="sectForm">
+        <form>
+            <label for="donde">DÓNDE</label>
+            <input type="text" name="donde" id="donde" placeholder="Dónde">
+
+
+            <div class="fecha">
+                <label for="fecha1">SALIDA</label>
+                <label for="fecha2">VUELTA</label>
+                <input type="date" name="fecha1" id="fecha1">
+                <input type="date" name="fecha2" id="fecha2"> 
+            </div>
+
+            <label for="viajeros">VIAJEROS</label>
+            <select name="viajeros" id="viajeros">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4 (o más)</option>
+            </select>
+
+            <input type="submit" id="submit" value="Buscar">
+        </form>
+    </section>
+
+    <section>
+        <h2>Descubre Airhopping</h2>
+        <div id="descubre">
+            <div>
+                <img src="img/alojamientos.jpg">
+                <p>Alojamientos</p>
+            </div>
+            <div>
+                <img src="img/experiencias.jpg">
+                <p>Experiencias</p>
+            </div>
+            <div>
+                <img src="img/aventuras.jpg">
+                <p>Aventuras</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="exception">
+        
+            <img src="img/arteycultura.jpg">   
+            
+            <h2>PRESENTAMOS</h2>  
+            <h2>Historia en Tokio</h2>
+            <h3>En las experiencias en Airhopping</h3>
+            
+        
+    </section>
+    
+</body>
+</html>
