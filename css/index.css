@@ -144,6 +144,7 @@ label{
 
 input[type="date"]{
     width: calc(50% - 4px);
+    background-color: white;
 }
 
 input[type="submit"]{
@@ -162,8 +163,8 @@ input[type="submit"]{
 
 #descubre div{
     width: 30%;
-    height: 135px;
-    box-shadow: 1px 11px 21px 1px rgba(181,181,181,1);
+    height: 117px;
+    box-shadow: 1px 6px 8px 1px rgba(181,181,181,1);
     border-radius: 11px;
     margin: auto;
 }
@@ -192,8 +193,44 @@ input[type="submit"]{
     position: absolute;
 }
 
-.exception h2{
+.exception h2, .exception h3, .exception div{
     position: absolute;
+    margin: 0;
 }
 
+.exception .present{
+    top: 2rem;
+    left: 34%;
+    font-size: 1rem;
+
+}
+
+.exception .historia{
+    top: 4.5rem;
+    left: 16%;
+    font-size: 2rem;
+}
+
+.exception h3{
+    top: 7.5rem;
+    left: 6%;
+    font-size: 1.3rem;
+}
+
+.exception div{
+    width: 41%;
+    height: 44px;
+    top: 10rem;
+    left: 31%;
+    background-color: black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exception a{
+    text-decoration: none;
+    color: white; 
+}
 
