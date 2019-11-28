@@ -169,7 +169,7 @@ input[type="submit"]{
 
 .cuadra{
     flex: 0 0 auto;
-    width: 53%;
+    width: 50%;
     box-shadow: 1px 6px 8px 1px rgba(181,181,181,1);
     border-radius: 11px;
     margin: 3%;
@@ -177,7 +177,7 @@ input[type="submit"]{
 
 .cuadra img{
     width: 100%;
-    height: 17vh;
+    height: 20vh;
     object-fit: cover;
     object-position: center;
     border-radius: 11px 11px 0 0;
@@ -192,7 +192,6 @@ input[type="submit"]{
 .exception{
     padding: 0;
     margin-top: 10%;
-    margin-bottom: 10%;
     background-image: url(../img/arteycultura.jpg);
     height: 100vh;
     background-size: cover;
