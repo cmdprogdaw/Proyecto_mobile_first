@@ -36,7 +36,7 @@ section{
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: rgb(193, 193, 193);
     display: block;
     transition: 0.3s;
 }
@@ -142,9 +142,12 @@ label{
     width: 50%;
 }
 
+input{
+    background-color: white;
+}
+
 input[type="date"]{
     width: calc(50% - 4px);
-    background-color: white;
 }
 
 input[type="submit"]{
@@ -155,28 +158,35 @@ input[type="submit"]{
     color: #ffffff;
 }
 
-/* DESCUBRE AIRHOPPING */
-#descubre {
+/* MENU DESPLAZABLE */
+.flex-desp{
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
-#descubre div{
-    width: 30%;
-    height: 117px;
+.flex-desp::-webkit-scrollbar{
+    display: none;
+}
+
+.cuadra{
+    flex: 0 0 auto;
+    width: 50%;
     box-shadow: 1px 6px 8px 1px rgba(181,181,181,1);
     border-radius: 11px;
-    margin: auto;
+    margin: 3%;
 }
 
-#descubre img{
+.cuadra img{
     width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    object-position: center;
     border-radius: 11px 11px 0 0;
 }
 
-#descubre p{
-    margin: 0;
-    margin-top: 10px;
+.cuadra p{
     text-align: center;
     font-size: 14px;
 }
@@ -185,43 +195,42 @@ input[type="submit"]{
 .exception{
     padding: 0;
     margin-top: 10%;
-    position: relative;
+    background-image: url(../img/arteycultura.jpg);
+    height: 100vh;
+    background-size: cover;
 }
 
 .exception img{
     width: 100%;
-    position: absolute;
 }
 
 .exception h2, .exception h3, .exception div{
-    position: absolute;
     margin: 0;
 }
 
 .exception .present{
-    top: 2rem;
-    left: 34%;
+    padding-top: 2rem;
+    padding-left: 34%;
     font-size: 1rem;
-
 }
 
 .exception .historia{
-    top: 4.5rem;
-    left: 16%;
+    padding-top: 1.5rem;
+    padding-left: 17%;
     font-size: 2rem;
 }
 
 .exception h3{
-    top: 7.5rem;
-    left: 6%;
+    padding-top: 0.5rem;
+    padding-left: 7%;
     font-size: 1.3rem;
 }
 
 .exception div{
     width: 41%;
-    height: 44px;
-    top: 10rem;
-    left: 31%;
+    height: 38px;
+    margin-top: 1.5rem;
+    margin-left: 7.3rem;
     background-color: black;
     border-radius: 8px;
     display: flex;
@@ -232,5 +241,57 @@ input[type="submit"]{
 .exception a{
     text-decoration: none;
     color: white; 
+}
+
+/* CUADRADO DE IMÁGENES */
+.cuatro{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aventuras{
+    padding: 2%;
+    width: 45%;
+}
+
+.aventuras img{
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 11px 11px 11px 11px;
+}
+
+.aventuras h3{
+    margin: 0;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.aventuras p{
+    margin: 0;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    border: 3px solid rgb(224, 147, 137);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn a{
+    text-decoration: none;
+    color: rgb(224, 147, 137); 
+    font-weight: bold;
+}
+
+.oculto{
+    display: none;
 }
 
