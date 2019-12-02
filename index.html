@@ -22,13 +22,12 @@
 
     <!-- CABECERA -->
     <header>
-
         
-        <div style="cursor:pointer" onclick="openNav()" class="simbolos">
+        <div onclick="openNav()" class="simbolos">
             <img src="img/avion.svg" id="avion">
             <img src="img/flecha.png" id="flecha">
         </div>
-        <h1>Paga menos, viaja más</h1>
+        <h1>Paga menos, viaja más!</h1>
         <img src="img/portada.jpg" id="portada">
         
 
@@ -43,15 +42,16 @@
         </div>
     
         <nav>
-            <a href="#">Nosotros</a>
-            <a href="#">Anuncios</a>
-            <a href="#">Blog</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.html">Inicio</a>
+            <a href="#">Lugares</a>
+            <a href="#">Chollos</a>
+            <a href="#">Contacto</a>
         </nav>
 
     </header>
 
     <section class="sectForm">
+        <h1>Paga menos, viaja más!</h1>
         <form>
             <label for="donde">DÓNDE</label>
             <input type="text" name="donde" id="donde" placeholder="Dónde">
@@ -60,8 +60,8 @@
             <div class="fecha">
                 <label for="fecha1">SALIDA</label>
                 <label for="fecha2">VUELTA</label>
-                <input type="date" name="fecha1" id="fecha1">
-                <input type="date" name="fecha2" id="fecha2"> 
+                <input type="date" name="fecha1" id="fecha1" placeholder="dd/mm/aaaa">
+                <input type="date" name="fecha2" id="fecha2" placeholder="dd/mm/aaaa"> 
             </div>
 
             <label for="viajeros">VIAJEROS</label>
@@ -76,7 +76,7 @@
         </form>
     </section>
 
-    <section>
+    <section class="sectDescubre">
         <h2>Descubre Airhopping</h2>
         <div class="flex-desp">
             <div class="cuadra">
@@ -91,7 +91,7 @@
                 <img src="img/aventuras.jpg">
                 <p>Aventuras</p>
             </div>
-            <div class="cuadra">
+            <div class="cuadra hide">
                 <img src="img/restaurantes.jpg">
                 <p>Restaurantes</p>
             </div>
@@ -135,13 +135,25 @@
                 <p>Precio: 35€/persona</p>
             </div>
 
-            <div class="oculto">
+            <div class="aventuras oculto">
                 <img src="img/experiencia5.jpg">
                 <h3>Prearación de té</h3>
                 <p>Precio: 10€/persona</p> 
             </div> 
+
+            <div class="aventuras oculto">
+                <img src="img/experiencia6.jpg">
+                <h3>Clase de samuria</h3>
+                <p>Precio: 25€/persona</p> 
+            </div>
+
+            <div class="aventuras oculto2">
+                <img src="img/experiencia7.jpg">
+                <h3>Comida callejera</h3>
+                <p>Precio: 30€/persona</p> 
+            </div>
         </div>
-        <div class="btn"><a href="#">Mostrar todas las aventuras</a></div>
+        <div class="btn"><a href="#">Mostrar todas las aventuras<span>></span></a></div>
     </section>
     
 </body>
