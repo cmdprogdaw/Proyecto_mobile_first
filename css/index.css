@@ -5,13 +5,7 @@ body{
     font-family: 'Varela Round', sans-serif;
 }
 
-section{
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-/* MENU DESPLEGABLE MÓVIL */
-
+/* MENU DESPLEGABLE MÓVIL Y TABLET */
 .overlay {
     height: 0%;
     width: 100%;
@@ -22,6 +16,12 @@ section{
     background-color: rgba(0,0,0, 0.9);
     overflow-y: hidden;
     transition: 0.5s;
+}
+
+@media screen and (min-width: 1020px){
+    .overlay{
+        display: none;
+    }
 }
   
 .overlay-content {
@@ -40,6 +40,12 @@ section{
     display: block;
     transition: 0.3s;
 }
+
+@media screen and (min-width: 760px){
+    .overlay a{
+        font-size: 45px;
+    }
+}
   
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
@@ -51,20 +57,9 @@ section{
     right: 45px;
     font-size: 60px;
 }
-  
-/* @media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-} */
 
 
 /* HEADER */
-
 .simbolos{
     background-color: #818181;
     display: flex;
@@ -77,6 +72,12 @@ section{
     position: absolute;
 }
 
+@media screen and (min-width: 1020px){
+    #avion{
+        width: 5%;
+    }
+}
+
 #flecha{
     width: 2%;
     position: absolute;
@@ -84,17 +85,48 @@ section{
     margin-top: 5%;
 }
 
+@media screen and (min-width: 1020px){
+    #flecha{
+        display: none;
+    }
+}
+
 header nav{
     display: none;
+}
+
+@media screen and (min-width: 1020px){
+    header nav{
+        display: block;
+        position: absolute;
+        top: 4%;
+        left: 70%;
+    }
+
+    header nav a{
+        text-decoration: none;
+        color: white;
+        padding: 4px;
+    }
 }
 
 #portada{
     width: 100%;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 760px){
     #portada{
-        height: 757px;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    #portada{
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
     }
 }
 
@@ -105,8 +137,51 @@ header h1{
     color: #ffffff;
 }
 
+@media screen and (min-width: 760px){
+    header h1{
+        display: none;
+    }
+}
+
+
+/* SECTION */
+section{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 
 /* FORMULARIO */
+@media screen and (min-width: 760px){
+    .sectForm{
+        position: absolute;
+        background-color: white;
+        border-radius: 4px;
+        width: 50%; 
+        margin: 0;
+        top: 30%;
+        left: 25%;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    .sectForm{
+        width: 35%;
+        margin: 0;
+        top: 20%;
+        left: 14%;
+    }
+}
+
+.sectForm h1{
+    display: none;
+}
+
+@media screen and (min-width: 760px){
+    .sectForm h1{
+        display: block;
+    }
+}
 
 form{
    width: 100%; 
@@ -119,7 +194,6 @@ label{
     margin-bottom: 5px;
     font-weight: bold;
 }
-
 
 .fecha{
     display: flex;
@@ -155,12 +229,36 @@ input[type="submit"]{
     color: #ffffff;
 }
 
+@media screen and (min-width: 760px){
+    input[type="submit"]{
+        width: 30%;
+        margin-left: 70%;
+    }
+}
+
 /* MENU DESPLAZABLE */
+.sectDescubre{
+    padding-right: 0;
+}
+
+@media screen and (min-width: 760px){
+    .sectDescubre{
+        margin-top: 3rem;
+    }
+}
+
 .flex-desp{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 760px){
+    .flex-desp{
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
 }
 
 .flex-desp::-webkit-scrollbar{
@@ -175,6 +273,27 @@ input[type="submit"]{
     margin: 3%;
 }
 
+@media screen and (min-width: 760px){
+    .cuadra{
+        width: 27%;
+    }
+
+    .hide{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    .cuadra{
+        width: 23%;
+        margin: 1%;
+    }
+
+    .hide{
+        display: block;
+    }
+}
+
 .cuadra img{
     width: 100%;
     height: 10vh;
@@ -183,10 +302,23 @@ input[type="submit"]{
     border-radius: 11px 11px 0 0;
 }
 
+@media screen and (min-width: 760px){
+    .cuadra img{
+        height: 15vh;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    .cuadra img{
+        height: 20vh;
+    }
+}
+
 .cuadra p{
     text-align: center;
     font-size: 14px;
 }
+
 
 /* IMAGEN GRANDE */
 .exception{
@@ -195,7 +327,22 @@ input[type="submit"]{
     background-image: url(../img/arteycultura.jpg);
     height: 100vh;
     background-size: cover;
+    background-position: center;
     margin-bottom: 10%;
+}
+
+@media screen and (min-width: 760px){
+    .exception{
+        height: 38vh;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    .exception{
+        height: 55vh;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
 }
 
 .exception img{
@@ -212,16 +359,37 @@ input[type="submit"]{
     font-size: 1rem;
 }
 
+@media screen and (min-width: 760px){
+    .exception .present{
+        padding-top: 4.5rem;
+        padding-left: 12%;
+    }
+}
+
 .exception .historia{
     padding-top: 1.5rem;
     padding-left: 17%;
     font-size: 2rem;
 }
 
+@media screen and (min-width: 760px){
+    .exception .historia{
+        padding-top: 2.5rem;
+        padding-left: 12%;
+    }
+}
+
 .exception h3{
     padding-top: 0.5rem;
     padding-left: 7%;
     font-size: 1.3rem;
+}
+
+@media screen and (min-width: 760px){
+    .exception h3{
+        padding-top: 1rem;
+        padding-left: 12%;
+    }
 }
 
 .exception div{
@@ -236,10 +404,27 @@ input[type="submit"]{
     align-items: center;
 }
 
+@media screen and (min-width: 760px){
+    .exception div {
+        width: 22%;
+        height: 44px;
+        margin-top: 3rem;
+        margin-left: 5.3rem;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    .exception div {
+        width: 18%;
+        margin-left: 7.5rem;
+    }
+}
+
 .exception a{
     text-decoration: none;
     color: white; 
 }
+
 
 /* CUADRADO DE IMÁGENES */
 .cuatro{
@@ -252,21 +437,56 @@ input[type="submit"]{
     width: 45%;
 }
 
-.aventuras img{
-    width: 100%;
-    height: 35vh;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 11px 11px 11px 11px;
+@media screen and (min-width: 760px){
+    .aventuras{
+        padding: 1%;
+        width: 31%;
+    }
 }
 
-.aventuras h3{
+@media screen and (min-width: 1020px){
+    .aventuras{
+        padding: 0;
+        padding-left: 1%;
+        width: 13%;
+    }
+}
+
+.oculto{
+    display: none;
+}
+
+.oculto2{
+    display: none;
+}
+
+@media screen and (min-width: 760px){
+    .oculto{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1020px){
+    .oculto2{
+        display: block;
+    }
+}
+
+.cuatro img{
+    width: 100%;
+    height: 32vh;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.cuatro h3{
     margin: 0;
     font-weight: bold;
     margin-top: 6px;
 }
 
-.aventuras p{
+.cuatro p{
     margin: 0;
 }
 
@@ -282,6 +502,14 @@ input[type="submit"]{
     align-items: center;
 }
 
+@media screen and (min-width: 760px){
+    .btn{
+        border: none;
+        display: block;
+        margin-left: 0.4rem;
+        font-size: 1.2rem;
+    }
+}
 
 .btn a{
     text-decoration: none;
@@ -289,7 +517,13 @@ input[type="submit"]{
     font-weight: bold;
 }
 
-.oculto{
+.btn span{
     display: none;
 }
 
+@media screen and (min-width: 760px){
+    .btn span{
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
